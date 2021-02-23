@@ -33,9 +33,10 @@
 
 # Web related
 lib/generated_plugin_registrant.dart
-
+android/app/google-services.json
 # Symbolication related
 app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
