@@ -20,6 +20,9 @@
 # is commented out by default.
 #.vscode/
 
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
@@ -33,7 +36,6 @@
 
 # Web related
 lib/generated_plugin_registrant.dart
-**android/app/google-services.json
 # Symbolication related
 app.*.symbols
 
