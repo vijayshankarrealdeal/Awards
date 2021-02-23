@@ -20,7 +20,7 @@
 # is commented out by default.
 #.vscode/
 
-.google-services.json
+google-services.json
 
 
 # Flutter/Dart/Pub related
