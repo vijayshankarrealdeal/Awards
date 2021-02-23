@@ -43,12 +43,5 @@ app.*.map.json
 
 #.android/
 #.ios/
-
-lib/generated_plugin_registrant.dart
-.flutter-plugins-dependencies
-.env.dart
-key.properties
 google-services.json
-GoogleService-Info.plist
-android/app/build.gradle
-android/app/release/
+
