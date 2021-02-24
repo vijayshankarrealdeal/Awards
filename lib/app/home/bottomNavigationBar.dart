@@ -1,3 +1,4 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
@@ -38,16 +39,24 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                   nav.kCallback(1);
                   nav.change(1);
                 }),
-            IconButton(
-                icon: Icon(
-                  CupertinoIcons.mic,
-                  size: nav.active[2] ? nav.size : nav.activesize,
-                  color: nav.active[2] ? nav.color : nav.activeColor,
-                ),
-                onPressed: () {
-                  nav.kCallback(2);
-                  nav.change(2);
-                }),
+            AvatarGlow(
+              animate: true,
+              endRadius: 75.0,
+              duration: Duration(seconds: 1),
+              repeatPauseDuration: Duration(milliseconds: 2000),
+              repeat: true,
+              glowColor: Colors.black.withOpacity(0.1),
+              child: IconButton(
+                  icon: Icon(
+                    CupertinoIcons.mic,
+                    size: nav.active[2] ? nav.size : nav.activesize,
+                    color: nav.active[2] ? nav.color : nav.activeColor,
+                  ),
+                  onPressed: () {
+                    nav.kCallback(2);
+                    nav.change(2);
+                  }),
+            ),
             IconButton(
                 icon: Icon(
                   CupertinoIcons.music_albums,
