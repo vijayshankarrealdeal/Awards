@@ -59,16 +59,9 @@ class Auth extends AuthBase with ChangeNotifier {
   ///login to spotify account
   ///
   Future<void> loginSpotifyUser(BuildContext context) async {
-    // final GitHubSignIn gitHubSignIn = GitHubSignIn(
-    //     clientId: _clientId, clientSecret: _clientSecret, redirectUrl: '');
-
-    // final result = await gitHubSignIn.signIn(context);
-
-    // final AuthCredential githubAuthCredential =
-    //     GithubAuthProvider.credential(result.token);
-
-    // final UserCredential credential =
-    //     await FirebaseAuth.instance.signInWithCredential(githubAuthCredential);
+    final SpotifyLogin login =
+        SpotifyLogin(clientID: _clientId, key: _clientSecret);
+    login.authr();
   }
 
   @override
