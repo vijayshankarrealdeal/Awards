@@ -41,7 +41,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 }),
             AvatarGlow(
               animate: true,
-              endRadius: 75.0,
+              endRadius: 20.0,
               duration: Duration(seconds: 1),
               repeatPauseDuration: Duration(milliseconds: 2000),
               repeat: true,
