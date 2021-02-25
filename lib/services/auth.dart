@@ -19,8 +19,27 @@ class UserFromAuth {
   UserFromAuth({@required this.uid, @required this.email});
 }
 
-class Auth extends AuthBase {
+class Auth extends AuthBase with ChangeNotifier {
   final auth = FirebaseAuth.instance;
+  final clientID = "5930c0fa8f82484c9d93b75887a5a1a2";
+  final secretKey = "f89d9f3ff9bd4496892bca057c4f3611";
+  String _token;
+  DateTime _expirayDate;
+
+  ///checks user auth state
+  bool get spotifyAuth => _token != null;
+
+  ///genrates token
+  String get token {
+    if (_expirayDate != null &&
+        _expirayDate.isAfter(DateTime.now()) &&
+        _token != null) {
+      return _token;
+    }
+    return null;
+  }
+
+  ///firebase User
   UserFromAuth _userFromFirebase(user) {
     if (user == null) {
       return null;
@@ -29,6 +48,7 @@ class Auth extends AuthBase {
     }
   }
 
+  ///checks user state
   @override
   Stream<UserFromAuth> get onAuthChange {
     return auth.authStateChanges().map(_userFromFirebase);

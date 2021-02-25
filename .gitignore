@@ -21,7 +21,7 @@
 #.vscode/
 
 google-services.json
-apikey.dart
+auth.dart
 
 # Flutter/Dart/Pub related
 **/doc/api/
