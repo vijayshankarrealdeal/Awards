@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class ChangeofPage extends ChangeNotifier {
-  int pageIndex = 0;
+  int pageIndex = 3;
   final double size = 28;
   final double activesize = 30;
   Map<int, bool> active = {
