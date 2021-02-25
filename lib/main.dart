@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:voiceApp/app/home/change.dart';
 import 'package:voiceApp/app/home/homescreen.dart';
+import 'package:voiceApp/services/auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider<Auth>(
+      create: (context) => Auth(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

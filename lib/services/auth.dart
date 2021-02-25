@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:voiceApp/services/spotifyAPI/SpotifyLogin.dart';
 
 abstract class AuthBase {
   Stream<UserFromAuth> get onAuthChange;
@@ -10,6 +11,7 @@ abstract class AuthBase {
   Future<UserFromAuth> signInWithEmail(String email, String password);
   Future<UserFromAuth> signUpWithEmail(String email, String password);
   Future<void> forgetPassword(String email);
+  Future<void> loginSpotifyUser(BuildContext context);
   Future<void> signOut();
 }
 
@@ -21,8 +23,8 @@ class UserFromAuth {
 
 class Auth extends AuthBase with ChangeNotifier {
   final auth = FirebaseAuth.instance;
-  final clientID = "5930c0fa8f82484c9d93b75887a5a1a2";
-  final secretKey = "f89d9f3ff9bd4496892bca057c4f3611";
+  final _clientId = "5930c0fa8f82484c9d93b75887a5a1a2";
+  final _clientSecret = "f89d9f3ff9bd4496892bca057c4f3611";
   String _token;
   DateTime _expirayDate;
 
@@ -52,6 +54,21 @@ class Auth extends AuthBase with ChangeNotifier {
   @override
   Stream<UserFromAuth> get onAuthChange {
     return auth.authStateChanges().map(_userFromFirebase);
+  }
+
+  ///login to spotify account
+  ///
+  Future<void> loginSpotifyUser(BuildContext context) async {
+    // final GitHubSignIn gitHubSignIn = GitHubSignIn(
+    //     clientId: _clientId, clientSecret: _clientSecret, redirectUrl: '');
+
+    // final result = await gitHubSignIn.signIn(context);
+
+    // final AuthCredential githubAuthCredential =
+    //     GithubAuthProvider.credential(result.token);
+
+    // final UserCredential credential =
+    //     await FirebaseAuth.instance.signInWithCredential(githubAuthCredential);
   }
 
   @override
