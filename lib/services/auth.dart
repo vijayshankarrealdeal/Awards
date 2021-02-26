@@ -61,7 +61,7 @@ class Auth extends AuthBase with ChangeNotifier {
   Future<void> loginSpotifyUser(BuildContext context) async {
     final SpotifyLogin login =
         SpotifyLogin(clientID: _clientId, key: _clientSecret);
-    login.authr();
+    login.authr(context);
   }
 
   @override
