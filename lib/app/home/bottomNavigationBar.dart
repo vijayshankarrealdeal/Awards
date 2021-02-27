@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:voiceApp/app/functions.dart/RecordingFunctions.dart';
 import 'package:voiceApp/app/home/change.dart';
 
 class MaterialBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nav = Provider.of<ChangeofPage>(context);
+    final rec = Provider.of<RecorddingStartEnd>(context);
     return Container(
       height: MediaQuery.of(context).size.height * 0.09,
       decoration: BoxDecoration(
@@ -27,6 +29,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   nav.kCallback(0);
                   nav.change(0);
+                  rec.remove();
                 }),
             IconButton(
                 icon: Icon(
@@ -37,6 +40,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   nav.kCallback(1);
                   nav.change(1);
+                  rec.remove();
                 }),
             IconButton(
                 icon: Icon(
@@ -47,6 +51,8 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   nav.kCallback(2);
                   nav.change(2);
+                  rec.setUp();
+                  rec.check();
                 }),
             IconButton(
                 icon: Icon(
@@ -57,6 +63,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   nav.kCallback(3);
                   nav.change(3);
+                  rec.remove();
                 }),
             IconButton(
                 icon: Icon(
@@ -67,6 +74,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   nav.kCallback(4);
                   nav.change(4);
+                  rec.remove();
                 }),
           ],
         ),

@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:voiceApp/app/functions.dart/RecordingFunctions.dart';
 import 'package:voiceApp/app/home/change.dart';
 import 'package:voiceApp/app/home/homescreen.dart';
 import 'package:voiceApp/services/UserNULLORNOT.dart';
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
               user = snapshot.data;
             }
             return MultiProvider(providers: [
+              ChangeNotifierProvider<RecorddingStartEnd>(
+                  create: (context) => RecorddingStartEnd()),
               ChangeNotifierProvider<ChangeofPage>(
                   create: (context) => ChangeofPage()),
               ChangeNotifierProvider<UserISAUTHORNOT>(

@@ -1,9 +1,13 @@
+import 'dart:io';
 import 'package:flutter/cupertino.dart';
 
 class ChangeofPage extends ChangeNotifier {
   int pageIndex = 0;
   final double size = 28;
   final double activesize = 30;
+  Directory appDirectory;
+  Stream<FileSystemEntity> fileStream;
+  List<String> records;
   Map<int, bool> active = {
     0: false,
     1: true,

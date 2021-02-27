@@ -17,7 +17,7 @@ class _RecordListViewState extends State<RecordListView> {
   int _currentDuration;
   double _completedPercentage = 0.0;
   bool _isPlaying = false;
-  int _selectedIndex = -1;
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {

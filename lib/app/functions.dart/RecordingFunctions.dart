@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:voiceApp/app/home/change.dart';
 
 ///enums for recording state
 enum RecordingState {
@@ -17,13 +16,42 @@ enum RecordingState {
 ///
 class RecorddingStartEnd extends ChangeNotifier {
   RecordingState _recordingState = RecordingState.UnSet;
-  Icon recordIcons;
-  String recordText;
+  Icon recordIcons = Icon(CupertinoIcons.mic);
+  String recordText = '';
   FlutterAudioRecorder audioRecorder;
   Directory appDirectory;
   Stream<FileSystemEntity> fileStream;
-  List<String> records;
+  List<String> records = [];
 
+  void check() {
+    FlutterAudioRecorder.hasPermissions.then((hasPermision) {
+      if (hasPermision) {
+        _recordingState = RecordingState.Set;
+        recordIcons = Icon(CupertinoIcons.mic);
+        recordText = 'Record';
+        notifyListeners();
+      }
+    });
+    notifyListeners();
+  }
+
+  ///For Audio
+
+  void setUp() {
+    records = [];
+    getApplicationDocumentsDirectory().then((value) {
+      appDirectory = value;
+      appDirectory.list().listen((onData) {
+        records.add(onData.path);
+      }).onDone(() {
+        records = records.reversed.toList();
+        notifyListeners();
+      });
+    });
+    notifyListeners();
+  }
+
+  ///Start Process
   ///when record Buttonn is Pressed
   Future<void> onRecordButtonPressed(BuildContext context) async {
     switch (_recordingState) {
@@ -46,6 +74,7 @@ class RecorddingStartEnd extends ChangeNotifier {
         break;
 
       case RecordingState.UnSet:
+        print("from here");
         Scaffold.of(context).hideCurrentSnackBar();
         Scaffold.of(context).showSnackBar(SnackBar(
           content: Text('Please allow recording from settings.'),
@@ -90,12 +119,14 @@ class RecorddingStartEnd extends ChangeNotifier {
   _startRecording() async {
     await audioRecorder.start();
     // await audioRecorder.current(channel: 0);
+    refreshRecords(records);
+    notifyListeners();
   }
 
   _stopRecording() async {
     await audioRecorder.stop();
-
     _onRecordComplete();
+    notifyListeners();
   }
 
   _onRecordComplete() {
@@ -105,17 +136,23 @@ class RecorddingStartEnd extends ChangeNotifier {
     }).onDone(() {
       records.sort();
       records = records.reversed.toList();
-      notifyListeners();
     });
+    refreshRecords(records);
+    notifyListeners();
+  }
+
+  void refreshRecords(List<String> d) {
+    records = d;
+    notifyListeners();
   }
 
   ///dispose every unit
-  void dispose() {
+  void remove() {
     _recordingState = RecordingState.UnSet;
     audioRecorder = null;
-    super.dispose();
+    fileStream = null;
+    appDirectory = null;
+    records = null;
+    notifyListeners();
   }
-
-  ///
-
 }
