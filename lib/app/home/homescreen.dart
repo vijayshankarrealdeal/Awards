@@ -12,6 +12,8 @@ class HomeScreen extends StatelessWidget {
   final List<Widget> children = [
     Home(),
     Search(),
+    // ChangeNotifierProvider<RecordVoiceOfCLient>(
+    //     create: (context) => RecordVoiceOfCLient(), child: AddVoice()),
     AddVoice(),
     MusicStream(),
     Account(),

@@ -32,7 +32,8 @@ dependencies:
   http: ^0.12.2
   flutter_webview_plugin: ^0.3.11
   url_launcher: ^5.7.10
-  flutter_sound: ^7.7.0+1
+  flutter_audio_recorder: ^0.5.5
+  audioplayers: ^0.17.0
   speech_to_text: ^3.1.0
   highlight_text: ^0.7.2
   avatar_glow: ^1.2.0
