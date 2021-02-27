@@ -1,12 +1,9 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ip/flutter_ip.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
-import 'package:http/http.dart' as http;
 
 class SpotifyLogin {
+  // ignore: unused_field
   static List<String> _scopes = [
     'user-read-private',
     'user-read-email',

@@ -36,6 +36,7 @@ dependencies:
   speech_to_text: ^3.1.0
   highlight_text: ^0.7.2
   avatar_glow: ^1.2.0
+  path_provider: ^1.6.27
   line_awesome_icons: ^1.0.4+2
   oauth2: ^1.6.3
   # The following adds the Cupertino Icons font to your application.

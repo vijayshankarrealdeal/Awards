@@ -1,7 +1,5 @@
 import 'package:provider/provider.dart';
-import 'package:spotify/spotify.dart';
-import 'package:voiceApp/services/database.dart';
-import 'package:voiceApp/services/spotifyAPI/SpotifyLogin.dart';
+import 'package:voiceApp/services/firebase_services/database.dart';
 
 class ProviderInner {
   StreamProvider getUsersDeatails(Database database, String uid) {
