@@ -26,11 +26,11 @@ class AddVoice extends StatelessWidget {
                 await rec.onRecordButtonPressed(context);
               },
             ),
-            Expanded(
-              child: RecordListView(
-                records: rec.records,
-              ),
-            )
+            // Expanded(
+            //   child: RecordListView(
+            //     records: rec.records,
+            //   ),
+            // ),
           ],
         ),
       )),

@@ -10,7 +10,7 @@ class MaterialBottomNavigationBar extends StatelessWidget {
     final nav = Provider.of<ChangeofPage>(context);
     final rec = Provider.of<RecorddingStartEnd>(context);
     return Container(
-      height: MediaQuery.of(context).size.height * 0.09,
+      height: MediaQuery.of(context).size.height * 0.0699,
       decoration: BoxDecoration(
         color: nav.navbackground,
       ),
