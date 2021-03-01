@@ -17,9 +17,9 @@ class Account extends StatelessWidget {
             child: SizedBox(
               height: 200,
               width: 200,
-              child: CustomPaint(
-                painter: Ring(),
-              ),
+              // child: CustomPaint(
+              //   painter: Ring(),
+              // ),
             ),
           ),
         ],
