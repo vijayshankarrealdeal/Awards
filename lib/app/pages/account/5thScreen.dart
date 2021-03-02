@@ -13,12 +13,12 @@ class Account extends StatelessWidget {
             width: double.infinity,
           ),
           Center(
-            child: SizedBox(
-              height: 200,
-              width: 200,
-              // child: CustomPaint(
-              //   painter: Ring(),
-              // ),
+            child: Text(
+              'Awards',
+              style: TextStyle(
+                  fontFamily: 'SF-Pro-Display-Bold',
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontSize: MediaQuery.of(context).size.height * 0.1),
             ),
           ),
         ],
