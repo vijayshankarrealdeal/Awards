@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:voiceApp/app/widgits/ring.dart';
 
 class Account extends StatelessWidget {
   @override

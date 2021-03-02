@@ -87,5 +87,48 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+      - family: Athelas-Regular
+        fonts:
+          - asset: fonts/Athelas-Regular.ttf
+      - family: bitstream
+        fonts:
+          - asset: fonts/bitstream.ttf
+      - family: Charter-Regular
+        fonts:
+          - asset: fonts/Charter-Regular.ttf
+      - family: pala
+        fonts:
+          - asset: fonts/pala.ttf
+      - family: Seravek
+        fonts:
+          - asset: fonts/Seravek.ttf
+      - family: times-new-roman
+        fonts:
+          - asset: fonts/times-new-roman.ttf
+      - family: SFUIText-Regular
+        fonts:
+          - asset: fonts/SFUIText-Regular.otf
+      - family: NewYork
+        fonts:
+          - asset: fonts/NewYork.ttf
+      - family: SF-Pro
+        fonts:
+          - asset: fonts/SF-Pro.ttf
+      - family: SF-Pro-Rounded-Regular
+        fonts:
+          - asset: fonts/SF-Pro-Rounded-Regular.otf
+      - family: SF-Pro-Display-Bold
+        fonts:
+          - asset: fonts/SF-Pro-Display-Bold.otf
+      - family: SF-Pro-Text-Semibold
+        fonts:
+          - asset: fonts/SF-Pro-Text-Semibold.otf
+      - family: SF-Pro-Text-Regular
+        fonts:
+          - asset: fonts/SF-Pro-Text-Regular.otf
+      - family: SF-Pro-Text-Medium
+        fonts:
+          - asset: fonts/SF-Pro-Text-Medium.otf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
