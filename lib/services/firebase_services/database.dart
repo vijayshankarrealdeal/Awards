@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:voiceApp/models/userInfromation.dart';
+import 'package:awards/models/userInfromation.dart';
 
 abstract class Database {
   //to add userdetails

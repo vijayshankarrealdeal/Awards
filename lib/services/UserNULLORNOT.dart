@@ -1,5 +1,5 @@
+import 'package:awards/services/firebase_services/auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:voiceApp/services/firebase_services/auth.dart';
 
 class UserISAUTHORNOT extends ChangeNotifier {
   bool _stateChanges = false;

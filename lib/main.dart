@@ -2,11 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:voiceApp/app/functions.dart/RecordingFunctions.dart';
-import 'package:voiceApp/app/home/change.dart';
-import 'package:voiceApp/app/home/homescreen.dart';
-import 'package:voiceApp/services/UserNULLORNOT.dart';
-import 'package:voiceApp/services/firebase_services/auth.dart';
+import 'package:awards/app/functions.dart/RecordingFunctions.dart';
+import 'package:awards/app/home/change.dart';
+import 'package:awards/app/home/homescreen.dart';
+import 'package:awards/services/UserNULLORNOT.dart';
+import 'package:awards/services/firebase_services/auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

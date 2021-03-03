@@ -1,13 +1,13 @@
+//import 'package:firebase/firebase.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
-import 'package:provider/provider.dart';
-import 'package:voiceApp/services/firebase_services/auth.dart';
+//import 'package:provider/provider.dart';
 
 class MusicStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<Auth>(context);
+   // final auth = Provider.of<Auth>(context);
     return Scaffold(
       body: Container(
         child: Center(
@@ -22,7 +22,8 @@ class MusicStream extends StatelessWidget {
               CupertinoButton(
                 color: CupertinoColors.activeGreen,
                 child: Text('Spotify'),
-                onPressed: () => auth.loginSpotifyUser(context),
+                onPressed: () => print(''),
+                //auth.loginSpotifyUser(context),
               ),
             ],
           ),

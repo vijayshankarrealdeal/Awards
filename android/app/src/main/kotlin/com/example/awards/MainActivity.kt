@@ -1,4 +1,4 @@
-package com.example.voiceApp
+package com.example.awards
 
 import io.flutter.embedding.android.FlutterActivity
 

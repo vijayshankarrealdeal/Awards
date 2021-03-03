@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
-import 'package:voiceApp/app/functions.dart/diffrentGridTile/gridTile.dart';
-import 'package:voiceApp/services/UserNULLORNOT.dart';
+import 'package:awards/app/functions.dart/diffrentGridTile/gridTile.dart';
+import 'package:awards/services/UserNULLORNOT.dart';
 
 class Home extends StatelessWidget {
   @override

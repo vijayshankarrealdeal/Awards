@@ -1,4 +1,4 @@
-name: voiceApp
+name: awards
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -24,25 +24,21 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^4.3.3
-  firebase: ^8.0.0
-  firebase_auth: ^0.20.1
-  firebase_core: ^0.7.0
-  cloud_firestore: ^0.16.0+1
-  firebase_storage: ^7.0.0
-  http: ^0.12.2
+  firebase_core: ^1.0.0
+  cloud_firestore: ^1.0.0
+  firebase_auth: ^1.0.0
+  firebase_storage: ^8.0.0
+  firebase_storage_web: ^1.0.0
+  http: ^0.13.0
   flutter_webview_plugin: ^0.3.11
-  url_launcher: ^5.7.10
   flutter_audio_recorder: ^0.5.5
   audioplayers: 
-  speech_to_text: ^3.1.0
-  highlight_text: ^0.7.2
-  avatar_glow: ^1.2.0
-  path_provider: ^1.6.27
-  line_awesome_icons: ^1.0.4+2
-  oauth2: ^1.6.3
+  path_provider:
+  line_awesome_icons: 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -130,5 +126,6 @@ flutter:
       - family: SF-Pro-Text-Medium
         fonts:
           - asset: fonts/SF-Pro-Text-Medium.otf
+ 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -20,9 +20,6 @@
 # is commented out by default.
 #.vscode/
 
-google-services.json
-auth.dart
-
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
@@ -36,11 +33,14 @@ auth.dart
 
 # Web related
 lib/generated_plugin_registrant.dart
+
 # Symbolication related
 app.*.symbols
 
 # Obfuscation related
 app.*.map.json
 
-#.android/
-#.ios/
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release

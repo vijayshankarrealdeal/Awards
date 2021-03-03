@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:voiceApp/app/functions.dart/RecordingFunctions.dart';
+import 'package:awards/app/functions.dart/RecordingFunctions.dart';
 
 class AddVoice extends StatelessWidget {
   @override

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:voiceApp/app/functions.dart/diffrentGridTile/gridTile.dart';
-import 'package:voiceApp/app/home/bottomNavigationBar.dart';
-import 'package:voiceApp/app/home/change.dart';
-import 'package:voiceApp/app/pages/account/5thScreen.dart';
-import 'package:voiceApp/app/pages/addVoice/3rdScreen.dart';
-import 'package:voiceApp/app/pages/home/1stScreen.dart';
-import 'package:voiceApp/app/pages/musicStream/4thScreen.dart';
-import 'package:voiceApp/app/pages/search/2ndScreen.dart';
+import 'package:awards/app/functions.dart/diffrentGridTile/gridTile.dart';
+import 'package:awards/app/home/bottomNavigationBar.dart';
+import 'package:awards/app/home/change.dart';
+import 'package:awards/app/pages/account/5thScreen.dart';
+import 'package:awards/app/pages/addVoice/3rdScreen.dart';
+import 'package:awards/app/pages/home/1stScreen.dart';
+import 'package:awards/app/pages/musicStream/4thScreen.dart';
+import 'package:awards/app/pages/search/2ndScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Widget> children = [

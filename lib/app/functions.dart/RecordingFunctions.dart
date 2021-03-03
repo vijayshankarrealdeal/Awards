@@ -75,7 +75,9 @@ class RecorddingStartEnd extends ChangeNotifier {
 
       case RecordingState.UnSet:
         print("from here");
+        // ignore: deprecated_member_use
         Scaffold.of(context).hideCurrentSnackBar();
+        // ignore: deprecated_member_use
         Scaffold.of(context).showSnackBar(SnackBar(
           content: Text('Please allow recording from settings.'),
         ));
@@ -94,7 +96,9 @@ class RecorddingStartEnd extends ChangeNotifier {
       recordIcons = Icon(CupertinoIcons.stop);
       recordText = 'Recording';
     } else {
+       // ignore: deprecated_member_use
       Scaffold.of(context).hideCurrentSnackBar();
+       // ignore: deprecated_member_use
       Scaffold.of(context).showSnackBar(SnackBar(
         content: Text('Please allow recording from settings.'),
       ));

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import 'package:voiceApp/app/functions.dart/RecordingFunctions.dart';
-import 'package:voiceApp/app/home/change.dart';
+import 'package:awards/app/functions.dart/RecordingFunctions.dart';
+import 'package:awards/app/home/change.dart';
 
 class MaterialBottomNavigationBar extends StatelessWidget {
   @override

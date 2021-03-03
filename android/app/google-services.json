@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "922870020832",
-    "project_id": "voice-a83fa",
-    "storage_bucket": "voice-a83fa.appspot.com"
+    "project_number": "436734667488",
+    "project_id": "awards-e4daa",
+    "storage_bucket": "awards-e4daa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:922870020832:android:56d39bb98addddfef7ee85",
+        "mobilesdk_app_id": "1:436734667488:android:bd5ccae93c5408f44dfe85",
         "android_client_info": {
-          "package_name": "com.vsr99552956.voice"
+          "package_name": "com.vsr99552956.awards"
         }
       },
       "oauth_client": [
         {
-          "client_id": "922870020832-3796lq7k4rvmsjhv7hgica4arkk7ig53.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.vsr99552956.voice",
-            "certificate_hash": "e59f6377c12964cd6d002af4a8d2e575e7173af5"
-          }
-        },
-        {
-          "client_id": "922870020832-v8l0j469fnsus5lof4fi132p0m5qomro.apps.googleusercontent.com",
+          "client_id": "436734667488-12mupvbnqh4v87k51vttqc24pjc91buk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAZbxIdeIwrSiOqVKZskZ8WX8QNG8vz3xI"
+          "current_key": "AIzaSyDWXtm71qf9Ly3VnDx1kOns9gCrm-lv464"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "922870020832-v8l0j469fnsus5lof4fi132p0m5qomro.apps.googleusercontent.com",
+              "client_id": "436734667488-12mupvbnqh4v87k51vttqc24pjc91buk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
