@@ -33,12 +33,28 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+       <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
         navigator.serviceWorker.register('flutter_service_worker.js');
       });
     }
+    var firebaseConfig = {
+    apiKey: "AIzaSyAnCMgid3s5FMdhDSF9IRd5OIDOwZIHjhY",
+    authDomain: "awards-e4daa.firebaseapp.com",
+    projectId: "awards-e4daa",
+    storageBucket: "awards-e4daa.appspot.com",
+    messagingSenderId: "436734667488",
+    appId: "1:436734667488:web:6088b8baf3bb27e94dfe85",
+    measurementId: "G-6KWH0HYD2M"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
