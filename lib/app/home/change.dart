@@ -15,9 +15,9 @@ class ChangeofPage extends ChangeNotifier {
     3: true,
     4: true,
   };
-  final Color navbackground = Color.fromRGBO(0, 0, 0, 0.94);
-  final Color activeColor = Color.fromRGBO(0, 112, 225, 1);
-  final Color color = Color.fromRGBO(153, 153, 153, 1);
+  final Color navbackground = Color.fromRGBO(22, 22, 22, 0.94);
+  final Color activeColor = Color.fromRGBO(10, 132, 225, 1);
+  final Color color = Color.fromRGBO(117, 117, 117, 1);
   void kCallback(int index) {
     pageIndex = index;
 
