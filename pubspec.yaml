@@ -38,6 +38,7 @@ dependencies:
   audioplayer: ^0.8.1
   audioplayer_web: ^0.7.1 
   sliding_up_panel: ^1.0.2
+  palette_generator: ^0.2.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -128,6 +129,9 @@ flutter:
     - family: SF-Pro-Text-Medium
       fonts:
         - asset: fonts/SF-Pro-Text-Medium.otf
+    - family: SF-Pro-Display-Regular
+      fonts:
+        - asset: fonts/SF-Pro-Display-Regular.otf
  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
