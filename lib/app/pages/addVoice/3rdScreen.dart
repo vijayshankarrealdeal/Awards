@@ -15,6 +15,7 @@ class AddVoice extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(width: double.infinity),
             Text(
               rec.recordText,
               style: TextStyle(fontSize: 22, color: Colors.black),
