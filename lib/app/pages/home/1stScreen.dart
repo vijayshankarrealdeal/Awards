@@ -1,3 +1,4 @@
+import 'package:awards/NavPages/audioListenPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -19,7 +20,7 @@ class Home extends StatelessWidget {
             child: Consumer<GridTileManagerChanger>(
               builder: (context, _, c) {
                 return GridView.builder(
-                  itemCount: 200,
+                  itemCount: 1,
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                     childAspectRatio: 3 / 3,
                     maxCrossAxisExtent: changeGrid.scaleNormal,
@@ -28,13 +29,20 @@ class Home extends StatelessWidget {
                   ),
                   itemBuilder: (context, i) {
                     return GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => AudioListenPage()),
+                      ),
                       onScaleStart: changeGrid.scaleStart,
                       onScaleUpdate: changeGrid.scaleUpdate,
                       onScaleEnd: changeGrid.scaleEnd,
-                      child: AnimatedSwitcher(
-                        duration: Duration(milliseconds: 1000),
-                        child: Container(
+                      child: Container(
+                        decoration: BoxDecoration(
                           color: Colors.teal,
+                          image: DecorationImage(
+                            image: AssetImage('assets/Scans/Front.jpg'),
+                          ),
                         ),
                       ),
                     );

@@ -1,3 +1,4 @@
+import 'package:awards/app/widgits/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:awards/app/widgits/ring.dart';
@@ -6,7 +7,7 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(0, 0, 0, 1),
+      backgroundColor: Color.fromRGBO(13, 13, 13, 1),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,14 +29,11 @@ class Account extends StatelessWidget {
                       y: MediaQuery.of(context).size.height * 0.48,
                       w: MediaQuery.of(context).size.height * 0.006,
                     ),
-                    child: Container(
+                    child: AnimatedContainer(
+                      curve: Curves.easeIn,
+                      duration: Duration(milliseconds: 2000),
                       decoration: BoxDecoration(
-                        //color: Color.fromRGBO(255, 255, 255, 1),
-                        gradient: LinearGradient(colors: [
-                          CupertinoColors.activeBlue,
-                          CupertinoColors.systemPurple,
-                          CupertinoColors.systemPink,
-                        ]),
+                        color: Color.fromRGBO(255, 255, 255, 1),
                       ),
                       height: MediaQuery.of(context).size.height * 0.48,
                       width: MediaQuery.of(context).size.height * 0.48,
@@ -54,9 +52,10 @@ class Account extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.1,
             ),
-            CupertinoButton.filled(
-              child: Text('Login'),
-              onPressed: () => print(1),
+            ButtonsforUI(
+              title: 'Login',
+              color: Color.fromRGBO(10, 132, 255, 1),
+              callback: () => print(''),
             )
           ],
         ),
