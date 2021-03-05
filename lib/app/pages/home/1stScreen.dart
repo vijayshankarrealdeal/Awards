@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.teal,
                           image: DecorationImage(
-                            image: AssetImage('assets/Scans/Front.jpg'),
+                            image: AssetImage('images/Cover.jpg'),
                           ),
                         ),
                       ),

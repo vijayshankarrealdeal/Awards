@@ -17,7 +17,30 @@ class AudioListenPage extends StatelessWidget {
               color: Color.fromRGBO(255, 255, 255, 1)),
         ),
       ),
-      body: Container(),
+      body: Container(
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(13, 13, 13, 1),
+                    borderRadius: BorderRadius.circular(12.0),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'images/Cover.jpg',
+                      ),
+                      fit: BoxFit.cover,
+                    )),
+                height: MediaQuery.of(context).size.height * 0.5,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
