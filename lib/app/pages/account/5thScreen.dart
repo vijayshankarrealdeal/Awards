@@ -53,6 +53,8 @@ class Account extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.1,
             ),
             ButtonsforUI(
+              colorText: Color.fromRGBO(255, 255, 255, 1),
+              width: MediaQuery.of(context).size.width * 0.7,
               title: 'Login',
               color: Color.fromRGBO(10, 132, 255, 1),
               callback: () => print(''),

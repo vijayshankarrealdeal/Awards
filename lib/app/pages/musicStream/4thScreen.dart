@@ -23,6 +23,8 @@ class MusicStream extends StatelessWidget {
                 size: MediaQuery.of(context).size.height * 0.3,
               ),
               ButtonsforUI(
+                colorText: Color.fromRGBO(255, 255, 255, 1),
+                width: MediaQuery.of(context).size.width * 0.7,
                 title: 'Spotify',
                 color: Color.fromRGBO(50, 215, 75, 1),
                 callback: () => print(''),

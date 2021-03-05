@@ -4,27 +4,49 @@ class ButtonsforUI extends StatelessWidget {
   final String title;
   final Color color;
   final VoidCallback callback;
+  final double width;
+  final Color colorText;
+  final double radius;
+  final String fontFamily;
+  final IconData icon;
 
-  const ButtonsforUI({Key key, this.title, this.color, this.callback})
-      : super(key: key);
+  const ButtonsforUI(
+      {@required this.width,
+      this.fontFamily = 'SF-Pro-Text-Semibold',
+      @required this.colorText,
+      this.radius = 8.0,
+      this.title,
+      this.icon,
+      this.color,
+      this.callback});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: callback,
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.07,
-        width: MediaQuery.of(context).size.width * 0.7,
+        height: MediaQuery.of(context).size.height * 0.065,
+        width: width,
         child: Center(
-          child: Text(
-            title,
-            style: TextStyle(
-                fontFamily: 'SF-Pro-Text-Semibold',
-                fontSize: 17,
-                color: Color.fromRGBO(255, 255, 255, 1)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+                color: colorText,
+                size: 20,
+              ),
+              SizedBox(width: 10),
+              Text(
+                title,
+                style: TextStyle(
+                    fontFamily: fontFamily, fontSize: 17, color: colorText),
+              ),
+            ],
           ),
         ),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0), color: color),
+            borderRadius: BorderRadius.circular(radius), color: color),
       ),
     );
   }
