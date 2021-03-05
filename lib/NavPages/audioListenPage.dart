@@ -1,9 +1,37 @@
 import 'package:awards/app/widgits/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:palette_generator/palette_generator.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
-class AudioListenPage extends StatelessWidget {
+class AudioListenPage extends StatefulWidget {
+  @override
+  _AudioListenPageState createState() => _AudioListenPageState();
+}
+
+class _AudioListenPageState extends State<AudioListenPage> {
+  final List<String> images = ['images/Cover.jpg'];
+  List<PaletteColor> colors;
+  int _currentIndex = 0;
+  @override
+  void initState() {
+    colors = [];
+    _updatePallet();
+    super.initState();
+  }
+
+  _updatePallet() async {
+    for (String image in images) {
+      final PaletteGenerator generator =
+          await PaletteGenerator.fromImageProvider(AssetImage(image),
+              size: Size(200, 200));
+      colors.add(generator.lightMutedColor != null
+          ? generator.lightMutedColor
+          : PaletteColor(Color.fromRGBO(13, 13, 13, 1), 2));
+    }
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,7 +196,9 @@ class AudioListenPage extends StatelessWidget {
               ),
               minHeight: MediaQuery.of(context).size.height * 0.08,
               maxHeight: MediaQuery.of(context).size.height * 0.89,
-              color: Color.fromRGBO(28, 28, 30, 1),
+              color: colors.isNotEmpty
+                  ? colors[_currentIndex].color
+                  : Color.fromRGBO(13, 13, 13, 1),
               panel: Container(
                 // decoration: BoxDecoration(
                 //     gradient: LinearGradient(colors: [
