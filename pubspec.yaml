@@ -31,6 +31,7 @@ dependencies:
   firebase_storage_web: ^1.0.0
   http: ^0.13.0
   flutter_webview_plugin: ^0.3.11
+  flutter_web_auth: ^0.2.4
   flutter_audio_recorder: ^0.5.5
   audioplayers: 
   path_provider:

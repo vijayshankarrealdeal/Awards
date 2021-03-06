@@ -20,4 +20,10 @@ class Auth extends ChangeNotifier {
 
   Stream<UserFromAuth> get onAuthChange =>
       _refrence.authStateChanges().map(_userFromFirebase);
+
+
+  Future<void> _sihnInWithSpotify()async
+  {
+   
+  }
 }
