@@ -6,8 +6,12 @@ class UserISAUTHORNOT extends ChangeNotifier {
   final UserFromAuth user;
 
   UserISAUTHORNOT({this.user});
-
+  bool blur = false;
 //
+  void blurx() {
+    blur = !blur;
+    notifyListeners();
+  }
 
   bool checkUserIsVerifiedOrNot() {
     if (user.user.emailVerified) {

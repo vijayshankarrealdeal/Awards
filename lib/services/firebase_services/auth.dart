@@ -26,7 +26,7 @@ class Auth extends ChangeNotifier {
         .createUserWithEmailAndPassword(email: email, password: password);
 
     try {
-      await result.user.sendEmailVerification();
+      await result.user.sendEmailVerification(); 
       return _userFromFirebase(result.user);
     } catch (e) {
       throw Exception(e);

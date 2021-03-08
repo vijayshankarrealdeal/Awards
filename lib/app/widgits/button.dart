@@ -27,23 +27,31 @@ class ButtonsforUI extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.065,
         width: width,
         child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Icon(
-                icon,
-                color: colorText,
-                size: 20,
-              ),
-              SizedBox(width: 10),
-              Text(
-                title,
-                style: TextStyle(
-                    fontFamily: fontFamily, fontSize: 17, color: colorText),
-              ),
-            ],
-          ),
+          child: icon == null
+              ? Text(
+                  title,
+                  style: TextStyle(
+                      fontFamily: fontFamily, fontSize: 17, color: colorText),
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      icon,
+                      color: colorText,
+                      size: 20,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      title,
+                      style: TextStyle(
+                          fontFamily: fontFamily,
+                          fontSize: 17,
+                          color: colorText),
+                    ),
+                  ],
+                ),
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(radius), color: color),
