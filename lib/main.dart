@@ -1,4 +1,3 @@
-import 'package:awards/services/spotifyAPI/SpotifyLogin.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +34,6 @@ class MyApp extends StatelessWidget {
                   create: (context) => RecorddingStartEnd()),
               ChangeNotifierProvider<ChangeofPage>(
                   create: (context) => ChangeofPage()),
-              ChangeNotifierProvider<SpotifyLogin>(
-                  create: (context) => SpotifyLogin()),
               ChangeNotifierProvider<UserISAUTHORNOT>(
                   create: (context) => UserISAUTHORNOT(user: user)),
             ], child: HomeScreen());

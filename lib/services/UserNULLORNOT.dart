@@ -7,6 +7,30 @@ class UserISAUTHORNOT extends ChangeNotifier {
 
   UserISAUTHORNOT({this.user});
 
+//
+
+  bool checkUserIsVerifiedOrNot() {
+    if (user.user.emailVerified) {
+      notifyListeners();
+      return true;
+    } else {
+      notifyListeners();
+      return false;
+    }
+  }
+
+  ///
+  Future<void> updatePassword(String newPassword) async {
+    try {
+      await user.user.updatePassword(newPassword);
+    } catch (e) {
+      throw e;
+    }
+  }
+
+  ///
+
+  ///
   // ignore: unused_element
   void _returnUserStatus() {
     if (user == null) {

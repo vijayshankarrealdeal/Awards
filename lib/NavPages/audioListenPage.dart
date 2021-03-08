@@ -87,7 +87,7 @@ class _AudioListenPageState extends State<AudioListenPage> {
                         title: 'Play',
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.07,
+                        width: MediaQuery.of(context).size.width * 0.06,
                       ),
                       ButtonsforUI(
                         icon: CupertinoIcons.shuffle,
@@ -207,7 +207,7 @@ class _AudioListenPageState extends State<AudioListenPage> {
                 //   Colors.blueAccent,
                 //   Colors.purple,
                 // ])),
-                child: Column(
+                child: ListView(
                   children: [
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.03,
@@ -305,8 +305,8 @@ class _AudioListenPageState extends State<AudioListenPage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                          left: 18.0, right: 18.0, top: 12),
+                      padding:
+                          const EdgeInsets.only(left: 8.0, right: 8.0, top: 12),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
