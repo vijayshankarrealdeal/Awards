@@ -8,8 +8,42 @@ import 'package:awards/app/widgits/ring.dart';
 import 'package:provider/provider.dart';
 
 class Account extends StatelessWidget {
-  void blurEveryThing(UserISAUTHORNOT cblue) {
-    cblue.blurx();
+  void showDialog(BuildContext context) {
+    showGeneralDialog(
+      barrierLabel: "Login",
+      barrierDismissible: true,
+      barrierColor: Colors.black.withOpacity(0.5),
+      transitionDuration: Duration(milliseconds: 700),
+      context: context,
+      pageBuilder: (_, __, ___) {
+        return Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.3,
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Column(
+                children: [
+                  CupertinoTextField(),
+                  CupertinoTextField(),
+                ],
+              ),
+            ),
+            margin: EdgeInsets.only(bottom: 50, left: 12, right: 12),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (_, anim, __, child) {
+        return SlideTransition(
+          position: Tween(begin: Offset(0, 1), end: Offset(0, 0)).animate(anim),
+          child: child,
+        );
+      },
+    );
   }
 
   @override
@@ -71,7 +105,7 @@ class Account extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.7,
               title: 'Login',
               color: Color.fromRGBO(10, 132, 255, 1),
-              callback: () => blurEveryThing(userCheck),
+              callback: () => showDialog(context),
             )
           ],
         ),
